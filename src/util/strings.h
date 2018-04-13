@@ -26,7 +26,7 @@ int is_empty_str(const char *str){
 	return *p == '\0';
 }
 
-/* 返回左边不包含空白字符的字符串的指针 */
+/* Returns a pointer to a string that does not contain whitespace on the left */
 inline static
 char *ltrim(const char *str){
 	const char *p = str;
@@ -36,7 +36,7 @@ char *ltrim(const char *str){
 	return (char *)p;
 }
 
-/* 返回指向字符串结尾的指针, 会修改字符串内容 */
+/* Returns a pointer to the end of the string, modifies the contents of the string */
 inline static
 char *rtrim(char *str){
 	char *p;
@@ -48,7 +48,7 @@ char *rtrim(char *str){
 	return p;
 }
 
-/* 返回左边不包含空白字符的字符串的指针 */
+/* Returns a pointer to a string that does not contain whitespace on the left */
 inline static
 char *trim(char *str){
 	char *p;
@@ -370,7 +370,7 @@ std::string substr(const std::string &str, int start, int size){
 		start = (int)str.size() + start;
 	}
 	if(size < 0){
-		// 忽略掉 abs(size) 个字节
+		// Ignore abs(size) bytes
 		size = ((int)str.size() + size) - start;
 	}
 	if(start < 0 || size_t(start) >= str.size() || size < 0){
@@ -409,7 +409,7 @@ int bitcount(const char *p, int size){
 	return n;
 }
 
-// is big endia. TODO: auto detect
+// is big endian. TODO: auto detect
 #if 0
 	#define big_endian(v) (v)
 #else
