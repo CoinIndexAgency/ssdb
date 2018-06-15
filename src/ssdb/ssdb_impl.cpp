@@ -40,7 +40,6 @@ SSDBImpl::~SSDBImpl(){
 SSDB* SSDB::open(const Options &opt, const std::string &dir){
 	SSDBImpl *ssdb = new SSDBImpl();
 	ssdb->options.max_file_size = opt.max_file_size;
-	ssdb->options.create_if_missing = true;
 	ssdb->options.max_open_files = opt.max_open_files;
 	ssdb->options.filter_policy = leveldb::NewBloomFilterPolicy(opt.bloom_filter_policy_size);
 	ssdb->options.block_cache = leveldb::NewLRUCache(opt.cache_size * 1048576);
