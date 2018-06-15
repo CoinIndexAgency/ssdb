@@ -81,8 +81,8 @@ void Options::load(const Config &conf){
 	}
 
     strtolower(&create_str);
-    if(create_str == "yes"){
-        create_if_missing = true;
+    if(create_str == "no"){
+        create_if_missing = false;
     }
     strtolower(&exists_str);
     if(exists_str == "yes"){

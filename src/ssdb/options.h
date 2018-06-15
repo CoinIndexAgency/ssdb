@@ -25,7 +25,7 @@ public:
 	bool binlog;
 	size_t binlog_capacity;
 	size_t bloom_filter_policy_size;
-	bool create_if_missing = false;    // default for leveldb
+	bool create_if_missing = true;     // default for leveldb
 	bool error_if_exists = false;      // default for leveldb
 	bool paranoid_checks = false;      // default for leveldb
 	size_t block_restart_interval;
